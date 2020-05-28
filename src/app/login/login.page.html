@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+    <ion-toolbar (click)="openAlert()">
+        <ion-title slot="end">
+            Iniciar Sesión
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-buttons>
+                <ion-icon slot="icon-only" name="log-in-outline"></ion-icon>
+            </ion-buttons>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card class="welcome-card">
+        <img src="/assets/img.PNG" alt="" />
+        <ion-card-header>
+            <ion-card-subtitle>Nuestros Productos</ion-card-subtitle>
+            <ion-card-title>ACOMI DE R.L</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p> Aportaciones, Creditos, Remesas, Ahorros, Punto Xpress</p>
+        </ion-card-content>
+    </ion-card>
+
+
+    <ion-button color="success" expand="full" (click)="openAlert()">Iniciar </ion-button>
+
+</ion-content>

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ClienteInterface } from '../interfaces/clientesInterface';
+// import { HttpClient } from '@angular/common/http';
+import { ClientesService } from '../services/clientes.service';
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +10,30 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  cliente: ClienteInterface[] = [];
 
+  
+  constructor(
+    // private http: HttpClient,
+    private clientesService: ClientesService
+  ) {}
+
+  ngOnInit(){
+
+    this.clientesService.getClient()
+    // .subscribe(cliente => {
+    // // this.cliente = cliente;
+    // console.log(cliente);
+  
+    // //  const token = this.getItemOnLocalStorage('token');
+    // //  console.log(this.getItemOnLocalStorage);
+    // });
+  }
+
+  // getItemOnLocalStorage(key:string){
+  //   return window.localStorage.getItem(key);
+  //   console.log(key);
+  //   }
+
+    
 }
